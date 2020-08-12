@@ -159,3 +159,14 @@ Next set default project as ```mainApp``` and run ```ng s -o``` to run this app 
 Next build the mainApp ```npm run build:mainApp:externals``` and copy the build output to the **shell2** (only main.js files).
 
 >NOTE: it might be needed to use **Empty Cache and Hard Reload** from Chrome to make sure new file is loaded.
+
+## communication between apps (between micro frontends) via CustomEvents
+
+Example communication between subApp and mainApp:
+
+* subApp contains button that triggers custom even 'ce_subApp'.
+* mainApp listens ce_subApp event and react when the event is fired. Because we are not using ngZone we use **OnPush** strategy.
+
+Next build both apps **subApp and mainApp** and next copy necessary files to the shell2 to see that it is working.
+
+>NOTE: it might be needed to use **Empty Cache and Hard Reload** from Chrome to make sure new file is loaded.

@@ -8,4 +8,13 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class AppComponent {
   title = 'subApp';
+
+  changeHead() {
+    const data = {
+      action: 'do something'
+    };
+
+    const event = new CustomEvent('ce_subApp', { detail: data });
+    window.dispatchEvent(event);
+  }
 }
