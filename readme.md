@@ -2,7 +2,7 @@
 
 ## introduction
 
-This example shows to build SPA from many different micro front-ends (apps). Next chapters presents step by step how to achieve it.
+This example shows how to build SPA from many different micro front-ends (apps). Next chapters presents step by step how to achieve it.
 The following topics are presented:
 * bundling every app to single js file
 * optimization by not loading the same third party version (such as angular) multiple times
@@ -185,6 +185,10 @@ Next build both apps **subApp and mainApp** and next copy necessary files to the
 * Set **sideApp** as defaultProject in ```angular.json```.
 * Generate 2 components in sideApp: ```ng g c details``` and ```ng g c home```.
 * Define routing inside **sideApp**
+
+## lazy loaded micro frontends
+
+
 
 # resources
 based on [this](https://www.youtube.com/watch?v=oqle07Ifyoc)   

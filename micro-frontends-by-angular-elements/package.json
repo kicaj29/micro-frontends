@@ -14,7 +14,9 @@
     "build:mainApp:externals": "ng build --extra-webpack-config projects/mainApp/webpack.externals.js --prod --project mainApp --single-bundle  --output-hashing none && node build-elements.js mainApp",
     "build:sideApp:externals": "ng build --extra-webpack-config projects/sideApp/webpack.externals.js --prod --project sideApp --single-bundle  --output-hashing none && node build-elements.js sideApp",
     "build:subApp:externals": "ng build --extra-webpack-config projects/subApp/webpack.externals.js --prod --project subApp --single-bundle  --output-hashing none && node build-elements.js subApp",
-    "build:footerApp:externals": "ng build --extra-webpack-config projects/footerApp/webpack.externals.js --prod --project footerApp --single-bundle  --output-hashing none && node build-elements.js footerApp"
+    "build:footerApp:externals": "ng build --extra-webpack-config projects/footerApp/webpack.externals.js --prod --project footerApp --single-bundle  --output-hashing none && node build-elements.js footerApp",
+    "build:customersApp:externals": "ng build --extra-webpack-config projects/customersApp/webpack.externals.js --prod --project customersApp --single-bundle --output-hashing none && node build-elements.js customersApp",
+    "build:invoicesApp:externals": "ng build --extra-webpack-config projects/invoicesApp/webpack.externals.js --prod --project invoicesApp --single-bundle --output-hashing none && node build-elements.js invoicesApp"
   },
   "private": true,
   "dependencies": {

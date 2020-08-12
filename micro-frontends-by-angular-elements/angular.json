@@ -672,7 +672,275 @@
           }
         }
       }
+    },
+    "customersApp": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/customersApp",
+      "sourceRoot": "projects/customersApp/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "outputPath": "dist/customersApp",
+            "index": "projects/customersApp/src/index.html",
+            "main": "projects/customersApp/src/main.ts",
+            "polyfills": "projects/customersApp/src/polyfills.ts",
+            "tsConfig": "projects/customersApp/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/customersApp/src/favicon.ico",
+              "projects/customersApp/src/assets"
+            ],
+            "styles": [
+              "projects/customersApp/src/styles.css"
+            ],
+            "scripts": [
+              {
+                "bundleName": "polyfill-webcomp-es5",
+                "input": "node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"
+              },
+              {
+                "bundleName": "polyfill-webcomp",
+                "input": "node_modules/@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce-pf.js"
+              },
+              "node_modules/rxjs/bundles/rxjs.umd.js",
+              "node_modules/@angular/core/bundles/core.umd.js",
+              "node_modules/@angular/common/bundles/common.umd.js",
+              "node_modules/@angular/common/bundles/common-http.umd.js",
+              "node_modules/@angular/compiler/bundles/compiler.umd.js",
+              "node_modules/@angular/elements/bundles/elements.umd.js",
+              "node_modules/@angular/platform-browser/bundles/platform-browser.umd.js",
+              "node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/customersApp/src/environments/environment.ts",
+                  "with": "projects/customersApp/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "browserTarget": "customersApp:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "customersApp:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "customersApp:build"
+          }
+        },
+        "test": {
+          "builder": "ngx-build-plus:karma",
+          "options": {
+            "main": "projects/customersApp/src/test.ts",
+            "polyfills": "projects/customersApp/src/polyfills.ts",
+            "tsConfig": "projects/customersApp/tsconfig.spec.json",
+            "karmaConfig": "projects/customersApp/karma.conf.js",
+            "assets": [
+              "projects/customersApp/src/favicon.ico",
+              "projects/customersApp/src/assets"
+            ],
+            "styles": [
+              "projects/customersApp/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/customersApp/tsconfig.app.json",
+              "projects/customersApp/tsconfig.spec.json",
+              "projects/customersApp/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/customersApp/e2e/protractor.conf.js",
+            "devServerTarget": "customersApp:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "customersApp:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "invoicesApp": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/invoicesApp",
+      "sourceRoot": "projects/invoicesApp/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "outputPath": "dist/invoicesApp",
+            "index": "projects/invoicesApp/src/index.html",
+            "main": "projects/invoicesApp/src/main.ts",
+            "polyfills": "projects/invoicesApp/src/polyfills.ts",
+            "tsConfig": "projects/invoicesApp/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/invoicesApp/src/favicon.ico",
+              "projects/invoicesApp/src/assets"
+            ],
+            "styles": [
+              "projects/invoicesApp/src/styles.css"
+            ],
+            "scripts": [
+              {
+                "bundleName": "polyfill-webcomp-es5",
+                "input": "node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"
+              },
+              {
+                "bundleName": "polyfill-webcomp",
+                "input": "node_modules/@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce-pf.js"
+              },
+              "node_modules/rxjs/bundles/rxjs.umd.js",
+              "node_modules/@angular/core/bundles/core.umd.js",
+              "node_modules/@angular/common/bundles/common.umd.js",
+              "node_modules/@angular/common/bundles/common-http.umd.js",
+              "node_modules/@angular/compiler/bundles/compiler.umd.js",
+              "node_modules/@angular/elements/bundles/elements.umd.js",
+              "node_modules/@angular/platform-browser/bundles/platform-browser.umd.js",
+              "node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/invoicesApp/src/environments/environment.ts",
+                  "with": "projects/invoicesApp/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "browserTarget": "invoicesApp:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "invoicesApp:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "invoicesApp:build"
+          }
+        },
+        "test": {
+          "builder": "ngx-build-plus:karma",
+          "options": {
+            "main": "projects/invoicesApp/src/test.ts",
+            "polyfills": "projects/invoicesApp/src/polyfills.ts",
+            "tsConfig": "projects/invoicesApp/tsconfig.spec.json",
+            "karmaConfig": "projects/invoicesApp/karma.conf.js",
+            "assets": [
+              "projects/invoicesApp/src/favicon.ico",
+              "projects/invoicesApp/src/assets"
+            ],
+            "styles": [
+              "projects/invoicesApp/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/invoicesApp/tsconfig.app.json",
+              "projects/invoicesApp/tsconfig.spec.json",
+              "projects/invoicesApp/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/invoicesApp/e2e/protractor.conf.js",
+            "devServerTarget": "invoicesApp:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "invoicesApp:serve:production"
+            }
+          }
+        }
+      }
     }
   },
-  "defaultProject": "sideApp"
+  "defaultProject": "invoicesApp"
 }
