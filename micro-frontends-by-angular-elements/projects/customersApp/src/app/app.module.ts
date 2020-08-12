@@ -3,13 +3,17 @@ import { NgModule, Injector } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { createCustomElement } from '@angular/elements';
+import { CustomersListComponent } from './customers-list/customers-list.component';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomersListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [],
