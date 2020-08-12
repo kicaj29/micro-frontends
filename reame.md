@@ -21,3 +21,9 @@ ng generate application footerApp
 
 It will create 5 apps and first app **headerApp** will be the default app. Default app is set at the end of ```angular.json``` file:
 ```"defaultProject": "headerApp"```. Default project is used e.g. when we run ```ng s -o````.
+
+## add angular elements package
+
+```
+ng add @angular/elements
+```
