@@ -27,3 +27,13 @@ It will create 5 apps and first app **headerApp** will be the default app. Defau
 ```
 ng add @angular/elements
 ```
+
+## update initialization of the apps
+
+* in ```index.html``` rename ```app-root``` to ```header-app```.
+  >NOTE: ```header-app``` is name of the custom element and not name of the selector of angular component!
+* in ```main.ts``` disable ngZone: ```{ngZone: 'noop'}```. ngZone creates some unexpected results with Angular Elements that`s why we have to disable is and because of this for change detection strategy we will be using **OnPush**.
+* in ```app.component.ts``` set encapsulation on **ShadowDom**.
+* in ```app.module.ts``` use ```ngDoBootstrap``` to create and register custom element. ```AppComponent``` should be removed ```bootstrap``` array and should be added to ```entryComponents``` array.
+
+Repeat these steps for every app.
