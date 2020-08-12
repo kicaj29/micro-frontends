@@ -1,4 +1,5 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,14 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./app.component.css'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class AppComponent {
+export class AppComponent implements OnInit  {
   title = 'sideApp';
+
+  constructor(private router: Router){
+
+  }
+
+  ngOnInit() {
+    this.router.navigate(['/sideApp/home']);
+  }
 }

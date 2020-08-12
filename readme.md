@@ -170,3 +170,11 @@ Example communication between subApp and mainApp:
 Next build both apps **subApp and mainApp** and next copy necessary files to the shell2 to see that it is working.
 
 >NOTE: it might be needed to use **Empty Cache and Hard Reload** from Chrome to make sure new file is loaded.
+
+## using routing in micro frontend apps
+
+* Set **sideApp** as defaultProject in ```angular.json```.
+* Generate 2 components in sideApp: ```ng g c details``` and ```ng g c home```.
+* Define routing inside **sideApp**
+
+
