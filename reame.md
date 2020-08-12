@@ -37,3 +37,12 @@ ng add @angular/elements
 * in ```app.module.ts``` use ```ngDoBootstrap``` to create and register custom element. ```AppComponent``` should be removed ```bootstrap``` array and should be added to ```entryComponents``` array.
 
 Repeat these steps for every app.
+
+## install ngx-build-plus
+http://github.com/manfredsteyer/ngx-build-plus
+
+```
+ng add ngx-build-plus
+```
+
+>NOTE: it will update in angular.json only current default project (headerApp).
