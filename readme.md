@@ -65,3 +65,7 @@ ng g ngx-build-plus:externals
 It updates your app to use webpack externals.
 
 >NOTE: it will update angular.json only for current default project (headerApp).
+
+## repeat all 3 ngx-build-plus installs for all other apps
+
+To do it before every install you have to update ```defaultProject``` in ```angular.json```.
