@@ -8,9 +8,13 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall:bak": "",
+    "postinstall:bak": "ngcc",
     "postinstall": "ngcc",
-    "build:headerApp:externals": "ng build --extra-webpack-config projects/headerApp/webpack.externals.js --prod --project headerApp --single-bundle"
+    "build:headerApp:externals": "ng build --extra-webpack-config projects/headerApp/webpack.externals.js --prod --project headerApp --single-bundle",
+    "build:mainApp:externals": "ng build --extra-webpack-config projects/mainApp/webpack.externals.js --prod --project mainApp --single-bundle",
+    "build:sideApp:externals": "ng build --extra-webpack-config projects/sideApp/webpack.externals.js --prod --project sideApp --single-bundle",
+    "build:subApp:externals": "ng build --extra-webpack-config projects/subApp/webpack.externals.js --prod --project subApp --single-bundle",
+    "build:footerApp:externals": "ng build --extra-webpack-config projects/footerApp/webpack.externals.js --prod --project footerApp --single-bundle"
   },
   "private": true,
   "dependencies": {
