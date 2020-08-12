@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Micro frontends by angular elements</title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <base href="">
+  </head>
+  <body>
+    <main>
+      <header-app></header-app>
+      <script src="apps/polyfills-es5.js" nomodule defer></script>
+      <script src="apps/polyfills-es2015.js" type="module"></script>
+      <script src="apps/polyfill-webcomp-es5.js" defer></script>
+      <script src="apps/polyfill-webcomp.js" defer></script>
+      <script src="apps/scripts.js" defer></script>
+      <script src="apps/headerApp/main-es2015.js" type="module"></script>
+
+      <div class="wrapper">
+        <section class="content">
+
+          <main-app></main-app>
+          <script src="apps/polyfills-es5.js" nomodule defer></script>
+          <script src="apps/polyfills-es2015.js" type="module"></script>
+          <script src="apps/polyfill-webcomp-es5.js" defer></script>
+          <script src="apps/polyfill-webcomp.js" defer></script>
+          <script src="apps/scripts.js" defer></script>
+          <script src="apps/mainApp/main-es2015.js" type="module"></script>
+
+          <sub-app></sub-app>
+          <script src="apps/polyfills-es5.js" nomodule defer></script>
+          <script src="apps/polyfills-es2015.js" type="module"></script>
+          <script src="apps/polyfill-webcomp-es5.js" defer></script>
+          <script src="apps/polyfill-webcomp.js" defer></script>
+          <script src="apps/scripts.js" defer></script>
+          <script src="apps/subApp/main-es2015.js" type="module"></script>
+
+        </section>
+        <section class="side-nav">
+
+          <side-app></side-app>
+          <script src="apps/polyfills-es5.js" nomodule defer></script>
+          <script src="apps/polyfills-es2015.js" type="module"></script>
+          <script src="apps/polyfill-webcomp-es5.js" defer></script>
+          <script src="apps/polyfill-webcomp.js" defer></script>
+          <script src="apps/scripts.js" defer></script>
+          <script src="apps/sideApp/main-es2015.js" type="module"></script>
+
+        </section>
+      </div>
+
+      <footer-app></footer-app>
+      <script src="apps/polyfills-es5.js" nomodule defer></script>
+      <script src="apps/polyfills-es2015.js" type="module"></script>
+      <script src="apps/polyfill-webcomp-es5.js" defer></script>
+      <script src="apps/polyfill-webcomp.js" defer></script>
+      <script src="apps/scripts.js" defer></script>
+      <script src="apps/footerApp/main-es2015.js" type="module"></script>
+
+    </main>
+  </body>
+</html>

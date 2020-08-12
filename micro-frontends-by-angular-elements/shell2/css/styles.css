@@ -1,0 +1,27 @@
+body {
+  font-family: arial;
+  color: #333333
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  padding: 0 0 10px 15px;
+}
+
+hr {
+  border-style: dashed;
+  color: #eaeaea;
+}
+
+.side-nav {
+  width: 20%;
+  background-color: #e0dfdf;
+  margin: 15px 0 0 5px;
+  padding: 5px;
+  border-radius: 5px;
+}

@@ -122,4 +122,31 @@ npm run build:footerApp:externals
 
 ## create shell that will run all the apps
 
-Copy all bundled js files to \shell\apps and next run ```http-server -p 8123``` from **shell** folder to see working app.
+Copy all bundled js files (from elements folder) to \shell\apps and next run ```http-server -p 8123``` from **shell** folder to see working app.
+
+## avoid copying/downloading the same version of Angular (and other libs) by different apps
+
+This problem is solved in **shell2** folder.
+
+Currently bundles from ```elements``` folder contain content from ```\dis\{appName}\scripts.js```.
+This ```scripts.js``` files contains angular code. Also other code from polyfills is duplicated across the apps.
+All application code sits in ```main-es5.js``` and ```main-es2015.js```.   
+
+To avoid this duplication we can change the folders structure and create new **shell2** app:
+
+```
+footerApp
+headerApp
+mainApp
+sideApp
+subApp
+polyfills-es5.js
+polyfills-es2015.js
+polyfill-webcomp.js
+polyfill-webcomp-es5.js
+scripts.js
+```
+
+>NOTE: order of loading scripts in index.html is important!
+
+Next run ```http-server -p 8123``` from **shell2** folder to see working app.
