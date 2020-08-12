@@ -1,5 +1,14 @@
 # micro-frontends-by-angular-elements
-based on [this](https://www.youtube.com/watch?v=oqle07Ifyoc)
+
+## introduction
+
+This example shows to build SPA from many different micro front-ends (apps). Next chapters presents step by step how to achieve it.
+The following topics are presented:
+* bundling every app to single js file
+* optimization by not loading the same third party version (such as angular) multiple times
+* passing data from shell to the apps (e.g. auth token)
+* communication between micro front-ends via CustomEvents
+* using routing in micro front-ends
 
 ## create a new workspace
 
@@ -177,4 +186,6 @@ Next build both apps **subApp and mainApp** and next copy necessary files to the
 * Generate 2 components in sideApp: ```ng g c details``` and ```ng g c home```.
 * Define routing inside **sideApp**
 
-
+# resources
+based on [this](https://www.youtube.com/watch?v=oqle07Ifyoc)   
+https://micro-frontends.org/
