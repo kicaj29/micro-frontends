@@ -55,3 +55,13 @@ ng g ngx-build-plus:wc-polyfill
 It adds webcomponent polyfills to your app.
 
 >NOTE: it will update angular.json only for current default project (headerApp).
+
+## install ngx-build-plus externals
+
+```
+ng g ngx-build-plus:externals
+```
+
+It updates your app to use webpack externals.
+
+>NOTE: it will update angular.json only for current default project (headerApp).
