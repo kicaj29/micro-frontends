@@ -45,4 +45,13 @@ http://github.com/manfredsteyer/ngx-build-plus
 ng add ngx-build-plus
 ```
 
->NOTE: it will update in angular.json only current default project (headerApp).
+>NOTE: it will update angular.json only for current default project (headerApp).
+
+## install ngx-build-plus polyfills
+
+```
+ng g ngx-build-plus:wc-polyfill
+```
+It adds webcomponent polyfills to your app.
+
+>NOTE: it will update angular.json only for current default project (headerApp).
