@@ -150,3 +150,12 @@ scripts.js
 >NOTE: order of loading scripts in index.html is important!
 
 Next run ```http-server -p 8123``` from **shell2** folder to see working app.
+
+## communication from shell to the apps
+
+Add in ```app.component.ts``` from project ```mainApp``` new input ```authToken```.
+Next set default project as ```mainApp``` and run ```ng s -o``` to run this app as standalone app.   
+
+Next build the mainApp ```npm run build:mainApp:externals``` and copy the build output to the **shell2** (only main.js files).
+
+>NOTE: it might be needed to use **Empty Cache and Hard Reload** from Chrome to make sure new file is loaded.

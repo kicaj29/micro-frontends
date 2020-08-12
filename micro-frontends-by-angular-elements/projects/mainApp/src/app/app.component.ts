@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class AppComponent {
   title = 'mainApp';
+
+  @Input() public authToken: string;
 }
