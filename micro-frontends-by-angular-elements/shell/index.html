@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Micro frontends by angular elements</title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <base href="">
+  </head>
+  <body>
+    <main>
+      <header-app></header-app>
+      <script src="apps/headerApp/headerApp-elements-es2015.js"></script>
+
+      <div class="wrapper">
+        <section class="content">
+
+          <main-app></main-app>
+          <script src="apps/mainApp/mainApp-elements-es2015.js"></script>
+
+          <sub-app></sub-app>
+          <script src="apps/subApp/subApp-elements-es2015.js"></script>
+
+        </section>
+        <section class="side-nav">
+
+          <side-app></side-app>
+          <script src="apps/sideApp/sideApp-elements-es2015.js"></script>
+
+        </section>
+      </div>
+
+      <footer-app></footer-app>
+      <script src="apps/footerApp/footerApp-elements-es2015.js"></script>
+
+    </main>
+  </body>
+</html>

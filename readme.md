@@ -119,3 +119,7 @@ npm run build:sideApp:externals
 npm run build:subApp:externals
 npm run build:footerApp:externals
 ```
+
+## create shell that will run all the apps
+
+Copy all bundled js files to \shell\apps and next run ```http-server -p 8123``` from **shell** folder to see working app.
