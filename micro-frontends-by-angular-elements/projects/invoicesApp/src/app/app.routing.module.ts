@@ -6,7 +6,7 @@ import { InvoicesListComponent } from './invoices-list/invoices-list.component';
   imports: [
     RouterModule.forRoot(
       [
-        { path: 'invoices-list', component: InvoicesListComponent }
+        { path: 'invoices', component: InvoicesListComponent }
       ], { useHash: true }
     )
   ],

@@ -9,6 +9,7 @@ The following topics are presented:
 * passing data from shell to the apps (e.g. auth token)
 * communication between micro front-ends via CustomEvents
 * using routing in micro front-ends
+* lazy loading for micro front-ends
 
 ## create a new workspace
 
@@ -135,7 +136,7 @@ Copy all bundled js files (from elements folder) to \shell\apps and next run ```
 
 ## avoid copying/downloading the same version of Angular (and other libs) by different apps
 
-This problem is solved in **shell2** folder.
+This problem is solved in [shell2](./micro-frontends-by-angular-elements/shell2) folder.
 
 Currently bundles from ```elements``` folder contain content from ```\dis\{appName}\scripts.js```.
 This ```scripts.js``` files contains angular code. Also other code from polyfills is duplicated across the apps.
@@ -158,7 +159,7 @@ scripts.js
 
 >NOTE: order of loading scripts in index.html is important!
 
-Next run ```http-server -p 8123``` from **shell2** folder to see working app.
+Next run ```http-server -p 8123``` from [shell2](./micro-frontends-by-angular-elements/shell2) folder to see working app.
 
 ## communication from shell to the apps
 
@@ -186,9 +187,12 @@ Next build both apps **subApp and mainApp** and next copy necessary files to the
 * Generate 2 components in sideApp: ```ng g c details``` and ```ng g c home```.
 * Define routing inside **sideApp**
 
-## lazy loaded micro frontends
+## lazy loaded micro frontends and routing
 
+[shell3-lazy-loading](./micro-frontends-by-angular-elements/shell3-lazy-loading) shows how to load on demand selected micro frontends.
+It loads [customersApp](./micro-frontends-by-angular-elements/projects/customersApp) and [invoicesApp](./micro-frontends-by-angular-elements/projects/invoicesApp).
 
+> :warning: currently there is small bug that causes that URL in web browser does not change after navigation if the route has been used in the past. Impact is minimal because navigation works correctly and even ```router.url``` has correct value. It requires farther investigation.
 
 # resources
 based on [this](https://www.youtube.com/watch?v=oqle07Ifyoc)   

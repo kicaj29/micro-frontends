@@ -1,0 +1,34 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.container__header {
+  flex: 0 0 40px;
+  background-color: lightgrey;
+
+  /*next flex in the header:*/
+  display: flex;
+  flex-direction: row;
+}
+
+.container__header__nav__item {
+  font-size: large;
+}
+
+.container__main {
+  background-color: antiquewhite;
+  width: 100%;
+  flex: 1;
+}
+
+.container__footer {
+  background-color: darkgray;
+  flex: 0 0 40px;
+}

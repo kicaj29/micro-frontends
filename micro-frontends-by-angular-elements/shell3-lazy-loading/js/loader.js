@@ -2,7 +2,7 @@ var loadedApp = [];
 
 function loadMicroApp(appName) {
   let microApp = '';
-  let micorFolder = '';
+  let microFolder = '';
 
   let mainEle = document.querySelector(".content");
   mainEle.innerHTML = '';
@@ -47,7 +47,10 @@ function loadMicroApp(appName) {
 function getAppName() {
   const urlArr = window.document.location.href.split('#');
   if (urlArr.length === 2) {
-    return urlArr[1].split('/')[1];
+    let retVal = '';
+    retVal = urlArr[1].split('/')[1];
+    console.log(retVal);
+    return retVal;
   } else {
     return '';
   }

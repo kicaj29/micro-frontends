@@ -11,10 +11,14 @@ export class AppComponent implements OnInit {
   title = 'invoicesApp';
 
   constructor(private router: Router) {
-
+    // this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.router.urlUpdateStrategy = 'eager';
   }
 
   ngOnInit() {
-    this.router.navigate(['/invoices-list']);
+    this.router.navigate(['/invoices']);
+    console.log('navigate to: invoices');
+    console.log(window.location.href);
+    console.log(this.router.url);
   }
 }

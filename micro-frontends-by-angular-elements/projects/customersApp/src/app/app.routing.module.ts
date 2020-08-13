@@ -6,7 +6,7 @@ import { CustomersListComponent } from './customers-list/customers-list.componen
   imports: [
     RouterModule.forRoot(
       [
-        { path: 'customers-list', component: CustomersListComponent }
+        { path: 'customers', component: CustomersListComponent }
       ], { useHash: true }
     )
   ],
