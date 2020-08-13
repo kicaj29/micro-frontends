@@ -194,6 +194,8 @@ It loads [customersApp](./micro-frontends-by-angular-elements/projects/customers
 
 > :warning: currently there is small bug that causes that URL in web browser does not change after navigation if the route has been used in the past. Impact is minimal because navigation works correctly and even ```router.url``` has correct value. It requires farther investigation.
 
+Run ```http-server -p 8123``` from [shell3-lazy-loading](./micro-frontends-by-angular-elements/shell3-lazy-loading) folder to see working app.
+
 # resources
 based on [this](https://www.youtube.com/watch?v=oqle07Ifyoc)   
 https://micro-frontends.org/
